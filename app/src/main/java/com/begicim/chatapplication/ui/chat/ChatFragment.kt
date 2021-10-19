@@ -2,7 +2,6 @@ package com.begicim.chatapplication.ui.chat
 
 import android.os.Bundle
 import android.view.View
-import androidx.core.widget.addTextChangedListener
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -11,7 +10,6 @@ import com.begicim.chatapplication.R
 import com.begicim.chatapplication.database.ChatDatabase
 import com.begicim.chatapplication.ui.chat.adapter.ChatAdapter
 import kotlinx.android.synthetic.main.fragment_chat.*
-
 
 class ChatFragment : Fragment(R.layout.fragment_chat) {
 

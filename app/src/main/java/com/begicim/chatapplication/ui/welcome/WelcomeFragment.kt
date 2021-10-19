@@ -9,6 +9,9 @@ import com.begicim.chatapplication.database.ChatDatabase
 import com.begicim.chatapplication.database.table.User
 import kotlinx.android.synthetic.main.fragment_welcome.*
 
+/*
+ Dummy two users is added once db created, please take a look at  ChatDatabase
+ */
 class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
 
     lateinit var welcomeViewModel: WelcomeViewModel
@@ -36,6 +39,10 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         super.onViewCreated(view, savedInstanceState)
 
         welcomeViewModel.userList.observe(viewLifecycleOwner, {
+            // we should only have 2 users
+            if(it.size != EXPECTED_USER_COUNT)
+                return@observe
+
             firstUserName = it[0].name
             secondUserName = it[1].name
 
@@ -53,5 +60,9 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         secondUserButton.setOnClickListener {
             welcomeClickListener?.onUserClicked(secondUser, firstUser)
         }
+    }
+
+    companion object {
+        const val EXPECTED_USER_COUNT = 2
     }
 }
