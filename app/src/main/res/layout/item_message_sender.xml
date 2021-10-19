@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:paddingBottom="10dp"
-    android:paddingEnd="6dp"
+    android:paddingBottom="@dimen/sender_message_field_padding_bottom"
+    android:paddingEnd="@dimen/sender_message_field_padding_end"
     android:layout_height="wrap_content">
 
     <TextView
@@ -22,8 +22,8 @@
         android:id="@+id/senderMessageTextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxWidth="260dp"
-        android:padding="10dp"
+        android:maxWidth="@dimen/message_max_width"
+        android:padding="@dimen/message_padding"
         android:background="@drawable/sender_message_background"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

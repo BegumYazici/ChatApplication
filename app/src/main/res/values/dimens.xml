@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="send_button_width">74dp</dimen>
+    <dimen name="test_frame_min_height">30dp</dimen>
+    <dimen name="test_frame_padding">10dp</dimen>
+    <dimen name="message_field_height">64dp</dimen>
+    <dimen name="message_field_margin_start">20dp</dimen>
+    <dimen name="message_field_padding">4dp</dimen>
+    <dimen name="message_field_margin_bottom">10dp</dimen>
+    <dimen name="message_field_margin_end">5dp</dimen>
+    <dimen name="send_button_height">64dp</dimen>
+    <dimen name="send_button_margin_end">10dp</dimen>
+    <dimen name="send_button_margin_buttom">10dp</dimen>
+    <dimen name="first_user_button_width">350dp</dimen>
+    <dimen name="second_user_button_width">350dp</dimen>
+    <dimen name="first_user_button_height">90dp</dimen>
+    <dimen name="second_user_button_height">90dp</dimen>
+    <dimen name="user_button_text_size">20sp</dimen>
+    <dimen name="message_max_width">260dp</dimen>
+    <dimen name="message_padding">10dp</dimen>
+    <dimen name="receiver_message_field_padding_start">6dp</dimen>
+    <dimen name="receiver_message_field_padding_bottom">10dp</dimen>
+    <dimen name="sender_message_field_padding_bottom">10dp</dimen>
+    <dimen name="sender_message_field_padding_end">6dp</dimen>
 </resources>

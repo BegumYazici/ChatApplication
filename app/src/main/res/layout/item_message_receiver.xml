@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingStart="6dp"
-    android:paddingBottom="10dp">
+    android:paddingStart="@dimen/receiver_message_field_padding_start"
+    android:paddingBottom="@dimen/receiver_message_field_padding_bottom">
 
     <TextView
         android:id="@+id/dateTextviewReceiver"
@@ -16,15 +16,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Thursday 11.59" />
+        tools:text="Thursday 11:59" />
 
     <TextView
         android:id="@+id/receiverMessageTextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/receiver_message_background"
-        android:maxWidth="260dp"
-        android:padding="10dp"
+        android:maxWidth="@dimen/message_max_width"
+        android:padding="@dimen/message_padding"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dateTextviewReceiver"
         tools:text="I'm doing well, what about you?" />
