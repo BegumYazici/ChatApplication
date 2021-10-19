@@ -1,4 +1,6 @@
 package com.begicim.chatapplication.ui
 
-class ChatViewModel {
+import androidx.lifecycle.ViewModel
+
+class ChatViewModel : ViewModel() {
 }
