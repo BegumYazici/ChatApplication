@@ -2,6 +2,7 @@ package com.begicim.chatapplication.ui.welcome
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.begicim.chatapplication.R
@@ -40,7 +41,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
 
         welcomeViewModel.userList.observe(viewLifecycleOwner, {
             // we should only have 2 users
-            if(it.size != EXPECTED_USER_COUNT)
+            if (it.size != EXPECTED_USER_COUNT)
                 return@observe
 
             firstUserName = it[0].name
@@ -54,12 +55,31 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         })
 
         firstUserButton.setOnClickListener {
+            if (isUsersNotInitialised()) {
+                showRestartAppToast()
+                return@setOnClickListener
+            }
+
             welcomeClickListener?.onUserClicked(firstUser, secondUser)
         }
 
         secondUserButton.setOnClickListener {
+            if (isUsersNotInitialised()) {
+                showRestartAppToast()
+                return@setOnClickListener
+            }
+
             welcomeClickListener?.onUserClicked(secondUser, firstUser)
         }
+    }
+
+    // It's a workaround when app first time opened this fragment might be visible before dummy users added tp db
+    private fun isUsersNotInitialised(): Boolean {
+        return !this::firstUser.isInitialized || !this::secondUser.isInitialized
+    }
+
+    private fun showRestartAppToast() {
+        Toast.makeText(context, "Please restart app :)", Toast.LENGTH_LONG).show()
     }
 
     companion object {
