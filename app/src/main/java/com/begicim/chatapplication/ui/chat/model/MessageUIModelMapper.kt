@@ -24,7 +24,6 @@ class MessageUIModelMapper {
 
             messageUIList.add(MessageUIModel(value.message, formattedDate, isSender,shouldShowDate))
         }
-
         return messageUIList
     }
 
