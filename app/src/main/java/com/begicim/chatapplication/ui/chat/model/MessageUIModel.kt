@@ -1,4 +1,4 @@
-package com.begicim.chatapplication.ui.model
+package com.begicim.chatapplication.ui.chat.model
 
 data class MessageUIModel(
     val message : String,

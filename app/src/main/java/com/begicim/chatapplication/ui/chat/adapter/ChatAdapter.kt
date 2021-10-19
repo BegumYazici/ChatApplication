@@ -1,14 +1,14 @@
-package com.begicim.chatapplication.ui.adapter
+package com.begicim.chatapplication.ui.chat.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.begicim.chatapplication.R
-import com.begicim.chatapplication.ui.adapter.viewholder.ChatViewHolder
-import com.begicim.chatapplication.ui.model.MessageUIModel
+import com.begicim.chatapplication.ui.chat.adapter.viewholder.ChatViewHolder
+import com.begicim.chatapplication.ui.chat.model.MessageUIModel
 
-class ChatAdapter(private val messageList: List<MessageUIModel>) :
+class ChatAdapter(var messageList: List<MessageUIModel> = mutableListOf()) :
     RecyclerView.Adapter<ChatViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {

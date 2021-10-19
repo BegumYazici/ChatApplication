@@ -1,4 +1,4 @@
-package com.begicim.chatapplication.ui.adapter.viewholder
+package com.begicim.chatapplication.ui.chat.adapter.viewholder
 
 import android.view.View
 import android.widget.TextView
