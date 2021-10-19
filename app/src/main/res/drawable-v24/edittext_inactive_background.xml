@@ -5,7 +5,7 @@
 
     <stroke
         android:width="2dp"
-        android:color="@color/sender_message_background" />
+        android:color="@color/grey" />
 
     <corners android:radius="20dp"/>
 
