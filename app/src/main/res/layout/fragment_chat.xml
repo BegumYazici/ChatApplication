@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ChatFragment">
+    tools:context=".ui.chat.ChatFragment">
 
     <TextView
         android:id="@+id/testInformation"
@@ -13,6 +13,7 @@
         android:minHeight="30dp"
         android:padding="10dp"
         android:gravity="center_horizontal"
+        android:background="@color/purple_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,27 +25,33 @@
         android:layout_height="0dp"
         android:background="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/messageFieldTextview"
+        app:layout_constraintBottom_toTopOf="@+id/sendButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testInformation" />
+        app:layout_constraintTop_toBottomOf="@+id/testInformation"
+        tools:listitem="@layout/item_message_sender"/>
 
     <EditText
         android:id="@+id/messageFieldTextview"
         android:layout_width="0dp"
-        android:layout_height="44dp"
+        android:layout_height="64dp"
         android:layout_marginStart="20dp"
+        android:padding="4dp"
+        android:hint="@string/type_something"
         android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sendButton"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/sendButton"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="@dimen/send_button_width"
+        android:layout_height="64dp"
         android:layout_marginEnd="10dp"
         android:src="@drawable/send_button"
         android:layout_marginBottom="10dp"
+        android:text="@string/send"
+        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
