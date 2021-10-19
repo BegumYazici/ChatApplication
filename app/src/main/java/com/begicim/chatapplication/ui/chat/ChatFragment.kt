@@ -29,6 +29,7 @@ class ChatFragment : Fragment(R.layout.fragment_chat) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //It's not good practice to force to open but sake of the time I did :)
         firstUser = arguments?.getString("firstUserName").toString()
         firstUserId = arguments?.getInt("firstUserID")!!
 
@@ -39,7 +40,6 @@ class ChatFragment : Fragment(R.layout.fragment_chat) {
 
         chatViewModelFactory = ChatViewModelFactory(messageDao, firstUserId, secondUserId)
         chatViewModel = ViewModelProvider(this, chatViewModelFactory).get(ChatViewModel::class.java)
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

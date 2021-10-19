@@ -39,11 +39,9 @@ class ChatViewModel(
                 e.printStackTrace()
             }
         }
-
-        //I could've
+        //It's not best way to update list, it would be better to just take the last item
         getMessageList()
     }
-
 
     private fun getMessageList() {
         coroutineScope.launch {
